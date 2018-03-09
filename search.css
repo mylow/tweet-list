@@ -1,0 +1,137 @@
+html {
+    width: 100%;
+}
+
+body {
+    background-color: #1DA1F2;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    max-width:850px;
+    margin-top:2.5px;
+}
+
+#tweet {
+    background-color: #fff;
+    border-bottom: 1px solid #e6ecf0;
+    cursor: pointer;
+    position: relative;
+    min-height: 51px;
+    padding: 9px 12px;
+    overflow:overlay;
+}
+
+#tweet:last-of-type {
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+#tweet:hover {
+    background-color: #f5f8fa;
+}
+
+#tweet .avatar {
+    float: left;
+    margin-top: -15px;
+    margin-left: -58px;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    -moz-force-broken-image-icon: 1;
+}
+
+#content {
+    margin-left: 58px;
+}
+
+#name-header {
+    line-height: 16px;
+    display: flex;
+    overflow: hidden;
+}
+
+#name-header small {
+    padding-left:5px;
+}
+
+#tweet-inner {
+    margin-left:58px;
+}
+
+#search-page form {
+    width:850px;
+    margin: auto;
+}
+
+#search-page form .search-bar {
+    display: block;
+    background-color: white;
+    padding: 0.125rem 0.125rem 0.0625rem;
+    font-size: 1rem;
+    border-width: 0;
+    border: .33px solid white;
+    line-height: 1.9;
+    width: calc(100% - 200px);
+    transition: all 0.28s ease;
+    box-shadow: none;
+    float:left;
+    font-size: 36px;
+    outline:none;
+    text-align: center;
+    border-top-left-radius:5px ;
+}
+
+#search-page form .search-bar::before {
+    content:"3";
+}
+
+#search-page form .search-submit {
+    height: 72px;
+    width:200px;
+    background-color: #6ec2f7;
+    border: 1px solid #6ec2f7;
+    border-left: none;
+    color:white;
+    font-size: 24px;
+    border-top-right-radius:5px ;
+}
+
+#search-page form .search-submit:hover {
+    cursor: pointer;
+    background-color: #00bbff;
+}
+
+@media only screen and (max-width:890px) {
+    #search-page form {
+        width:100%;
+    }
+
+    #tweet:last-of-type {
+        border-bottom-left-radius:none;
+        border-bottom-right-radius:none;
+}
+    #search-page form .search-bar {
+        width: calc(100% - 75px);
+    }
+    
+    #search-page form .search-submit {
+        width:75px
+    }
+    #search-page form .search-submit {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
