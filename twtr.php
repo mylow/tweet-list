@@ -4,14 +4,15 @@ require_once('TwitterAPIExchange.php');
 $settings = array(
 'oauth_access_token' => "xxx",
 'oauth_access_token_secret' => "yyy",
-'consumer_key' => "zzz",
+'consumer_key' => "www",
 'consumer_secret' => "qqq"
 );
 $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 $requestMethod = "GET";
-if (isset($_GET['user']))  {$user = $_GET['user'];}  else {$user  = "";}
+if (isset($_GET['user']))  {$user = $_GET['user'];}  else {$user  = "suremen";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 250;}
-$getfield = "?screen_name=$user&count=$count";
+if (isset($_GET['profile_image_url'])) {$profile_image_url = $_GET['profile_image_url'];} else {$profile_image_url = "";}
+$getfield = "?screen_name=$user&count=$count&profile_image_url=$profile_image_url";
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
 ->buildOauth($url, $requestMethod)
@@ -23,7 +24,7 @@ foreach($string as $items)
         echo "<div id='content'><div id='name-header'><strong>". $items['user']['name']."</strong";
         echo " ". $items['user']['screen_name']."";
         echo "<div id='time'><small>&#32; &#183; ".$items['created_at']."</small></div>";
-        echo "<img class='avatar' src='https://twitter.com/$user/profile_image?size=original'></div>";
+        echo "<img class='avatar' src='https://avatars.io/twitter/$user'></div>";
         echo "<div id='tweet-inner'>" . $items['text']."</div></div></div>";
     }
 ?>
