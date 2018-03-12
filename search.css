@@ -104,6 +104,17 @@ main {
     background-color: #00bbff;
 }
 
+#tweet a {
+    text-decoration: none;
+    color:black;
+}
+
+#tweet a:active {
+    color:black;
+}
+
+
+
 @media only screen and (max-width:890px) {
     #search-page form {
         width:100%;

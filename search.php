@@ -2,7 +2,8 @@
     <head>
         <link href="search.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>@<?php echo " ". $items['user'].""; ?></title>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <title>@ tweets</title>
     </head>
     <div id="search-page">
     <form action="/twitter/search.php" method="GET">
